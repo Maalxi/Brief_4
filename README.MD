@@ -1,4 +1,4 @@
-# Exercices Typescript
+# Exercices git (.gitignore)
 
 ### Pré-requis
 
