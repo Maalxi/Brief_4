@@ -1,8 +1,65 @@
 /* Les différentes polices */
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Le CSS principal */
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
 }
+
+button {
+  background-color: blueviolet;
+}
+
+/* Page d'accueil */
+
+.page_accueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: auto;
+  height: 106.17886178861788vh;
+  background-color: gray;
+}
+
+.cercle_1 {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  z-index: 1;
+}
+
+.cercle_2 {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 30%;
+  z-index: 1;
+}
+
+.titre_quiz {
+  margin-top: 25%;
+  margin-bottom: 80%;
+}
+
+.input_pseudo {
+  margin-top: 15%;
+  margin-bottom: 80%;
+}
+
+.container_accueil {
+  z-index: 2;
+}
+
+/* Première page Question */
