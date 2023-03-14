@@ -7,59 +7,69 @@
 
 * {
   font-family: "Roboto", sans-serif;
+  z-index: 0;
   margin: 0;
   padding: 0;
-  z-index: 0;
+}
+
+h1 {
+  font-family: "Pacifico", sans-serif;
+  max-width: 240px;
+  color: rgba(106, 142, 237, 1);
+  font-size: 32px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Pacifico", sans-serif;
+  max-width: 170px;
+  color: rgba(106, 142, 237, 1);
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.h2_question {
+  max-width: 300px;
+  color: rgba(106, 142, 237, 1);
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: center;
+  font-family: "Pacifico", sans-serif;
+}
+
+.h2_reponse {
+  max-width: 300px;
+  color: rgba(106, 142, 237, 1);
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: center;
+  font-family: "Pacifico", sans-serif;
 }
 
 button {
-  background-color: blueviolet;
-}
-
-/* Page d'accueil */
-
-.page_accueil {
+  /* Personnalisation du fond */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  max-width: 80px;
+  height: 30px;
+  width: 80px;
+  border: 0;
+  border-radius: 15px;
+  background-color: rgba(106, 142, 237, 1);
+
+  /* Personnalisation du text */
+  max-width: 80px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  line-height: 160.0000023841858%;
+  letter-spacing: 0%;
   text-align: center;
-  position: relative;
-  width: auto;
-  height: 106.17886178861788vh;
-  background-color: gray;
+  font-family: "Pacifico", sans-serif;
 }
-
-.cercle_1 {
-  background: #fff;
-  border-radius: 50%;
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  z-index: 1;
-}
-
-.cercle_2 {
-  background: #fff;
-  border-radius: 50%;
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  left: 30%;
-  z-index: 1;
-}
-
-.titre_quiz {
-  margin-top: 25%;
-  margin-bottom: 80%;
-}
-
-.input_pseudo {
-  margin-top: 15%;
-  margin-bottom: 80%;
-}
-
-.container_accueil {
-  z-index: 2;
-}
-
-/* Première page Question */
