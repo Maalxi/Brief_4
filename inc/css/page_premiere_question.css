@@ -10,8 +10,12 @@
 
 .h2_gauche {
   position: relative;
-  right: 5%;
-  bottom: 3%;
+  top: 2%;
+  left: 2%;
+}
+
+.text_h2_gauche {
+  white-space: nowrap;
 }
 
 .centrer_question {
