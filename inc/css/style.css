@@ -42,6 +42,40 @@ h3 {
   margin-bottom: 20%;
 }
 
+p {
+  color: brown;
+  /* color: rgba(0, 0, 0, 1); */
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  /* Personnalisation du fond */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80px;
+  height: 30px;
+  width: 80px;
+  border: 0;
+  border-radius: 15px;
+  background-color: rgba(106, 142, 237, 1);
+
+  /* Personnalisation du text */
+  max-width: 80px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  line-height: 160.0000023841858%;
+  letter-spacing: 0%;
+  text-align: center;
+  font-family: "Pacifico", sans-serif;
+}
+
+/* Page Question */
+
 .h2_question {
   max-width: 300px;
   color: rgba(106, 142, 237, 1);
@@ -50,26 +84,6 @@ h3 {
   letter-spacing: 0%;
   text-align: center;
   font-family: "Pacifico", sans-serif;
-}
-
-.h2_reponse {
-  max-width: 300px;
-  color: rgba(106, 142, 237, 1);
-  font-size: 24px;
-  line-height: 36px;
-  letter-spacing: 0%;
-  text-align: center;
-  font-family: "Pacifico", sans-serif;
-}
-
-p {
-  color: white;
-  /* color: rgba(0, 0, 0, 1); */
-  font-size: 20px;
-  line-height: 36px;
-  letter-spacing: 0%;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
 }
 
 .questions {
@@ -113,24 +127,149 @@ p {
   border: none;
 }
 
-button {
-  /* Personnalisation du fond */
+.container_button {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80px;
-  height: 30px;
-  width: 80px;
-  border: 0;
-  border-radius: 15px;
-  background-color: rgba(106, 142, 237, 1);
+  justify-content: space-between;
+  width: 70%;
+}
 
-  /* Personnalisation du text */
-  max-width: 80px;
-  color: rgba(0, 0, 0, 1);
-  font-size: 18px;
-  line-height: 160.0000023841858%;
+/* Page Réponse */
+
+.h2_reponse {
+  max-width: 300px;
+  color: rgba(106, 142, 237, 1);
+  font-size: 24px;
+  line-height: 36px;
   letter-spacing: 0%;
   text-align: center;
+  margin-bottom: 10%;
   font-family: "Pacifico", sans-serif;
+}
+
+.text_reponse {
+  background-color: black;
+  padding: 30px 20px 30px 20px;
+  margin: 0 5% 15% 5%;
+  border-radius: 15%;
+  border: none;
+}
+
+.container_button_reponse {
+  display: flex;
+  justify-content: center;
+}
+
+/* Média pour 300px */
+
+@media (max-width: 350px) {
+  h2 {
+    margin-bottom: 25%;
+  }
+  .questions {
+    margin-bottom: 30%;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reponse_A {
+    padding: 20px 20px 20px 20px;
+    width: auto;
+    border-radius: 10%;
+    margin: 5%;
+  }
+  .reponse_B {
+    padding: 20px 20px 20px 20px;
+    width: auto;
+    border-radius: 10%;
+    margin: 5%;
+  }
+  .reponse_C {
+    padding: 20px 20px 20px 20px;
+    width: auto;
+    border-radius: 10%;
+    margin: 5%;
+  }
+  .reponse_D {
+    padding: 20px 20px 20px 20px;
+    width: auto;
+    border-radius: 10%;
+    margin: 5%;
+  }
+  .container_button {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+}
+
+/* Média pour 400px */
+
+@media (min-width: 400px) {
+  .container_button {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+}
+
+/* Média pour 600px */
+
+@media (min-width: 600px) {
+  h2 {
+    margin-bottom: 5%;
+  }
+  h3 {
+    margin-bottom: 10%;
+  }
+  .container_button {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+  }
+}
+
+/* Média pour 900px */
+
+@media (min-width: 800px) {
+  h2 {
+    margin-bottom: 5%;
+  }
+  h3 {
+    margin-bottom: 10%;
+  }
+  .questions {
+    margin-bottom: 5%;
+  }
+  .reponse_A {
+    background-color: black;
+    padding: 50px 100px 50px 100px;
+    margin: 2%;
+    border-radius: 5%;
+    border: none;
+  }
+  .reponse_B {
+    background-color: black;
+    padding: 50px 100px 50px 100px;
+    margin: 2%;
+    border-radius: 5%;
+    border: none;
+  }
+  .reponse_C {
+    background-color: black;
+    padding: 50px 100px 50px 100px;
+    margin: 2%;
+    border-radius: 5%;
+    border: none;
+  }
+  .reponse_D {
+    background-color: black;
+    padding: 50px 100px 50px 100px;
+    margin: 2%;
+    border-radius: 5%;
+    border: none;
+  }
+  .container_button {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+  }
 }
