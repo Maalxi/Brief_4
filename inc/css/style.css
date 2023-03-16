@@ -195,6 +195,21 @@ button {
   justify-content: center;
 }
 
+/* Page de fin */
+
+.container_fin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70%;
+}
+
+.congrat {
+  margin-bottom: 30%;
+}
+
 /* Média pour 350px */
 
 @media (max-width: 350px) {
