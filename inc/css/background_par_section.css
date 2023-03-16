@@ -13,7 +13,7 @@
 
 
 
-/* Première page Question */
+/* page Question */
 
 
 .premiere_page_question {
@@ -29,7 +29,7 @@
 
 
 
-/* Première page Réponse */
+/* page Réponse */
 
 
 .premiere_page_reponse {
@@ -47,9 +47,10 @@
 
 
 
-/* Deuxieme page question */
+/* Page de fin */
 
-.deuxieme_page_question {
+
+.page_de_fin {
   width: auto;
   height: 106.17886178861788vh;
   background-image: url(../img/Fond_de_base.jpeg);
