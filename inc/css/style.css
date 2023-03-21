@@ -67,6 +67,7 @@ button {
   border: 0;
   border-radius: 15px;
   background-color: rgba(106, 142, 237, 1);
+  cursor: pointer;
 
   /* Personnalisation du text */
   max-width: 80px;
@@ -76,6 +77,16 @@ button {
   letter-spacing: 0%;
   text-align: center;
   font-family: "Pacifico", sans-serif;
+}
+
+/* Afficher (show) ou cacher (hide) les sections */
+
+/* .show {
+  display: "" ;
+} */
+
+.hide {
+  display: none !important;
 }
 
 /* Page Question */
@@ -122,36 +133,24 @@ button {
   align-items: center;
 }
 
-.reponse_A {
-  background-color: rgba(0, 0, 255, 0.85);
-  padding: 50px 40px 50px 40px;
-  margin: 2%;
-  border-radius: 15%;
-  border: none;
+.reponse_A, .reponse_B, .reponse_C, .reponse_D {
+  display: inline-block;
+  background-color: #f7f7f7;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.reponse_B {
-  background-color: rgba(255, 0, 0, 0.85);
-  padding: 50px 40px 50px 40px;
-  margin: 2%;
-  border-radius: 15%;
-  border: none;
+.reponse_A:hover, .reponse_B:hover, .reponse_C:hover, .reponse_D:hover {
+  background-color: #ebebeb;
 }
 
-.reponse_C {
-  background-color: rgba(255, 255, 0, 0.85);
-  padding: 50px 40px 50px 40px;
-  margin: 2%;
-  border-radius: 15%;
-  border: none;
-}
-
-.reponse_D {
-  background-color: rgba(0, 128, 0, 0.85);
-  padding: 50px 40px 50px 40px;
-  margin: 2%;
-  border-radius: 15%;
-  border: none;
+.reponse_A.selected, .reponse_B.selected, .reponse_C.selected, .reponse_D.selected {
+  background-color: #4CAF50;
+  color: #fff;
 }
 
 .container_button {

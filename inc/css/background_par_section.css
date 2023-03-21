@@ -1,54 +1,34 @@
 /* Page d'accueil */
 
-
 .page_accueil {
   width: auto;
-  height: 106.17886178861788vh;
+  height: 100vh;
   background-image: url(../img/Fond_de_base.jpeg);
   background-attachment: fixed;
   background-size: cover;
 }
-
-
-
-
 
 /* page Question */
 
-
 .premiere_page_question {
   width: auto;
-  height: 106.17886178861788vh;
+  height: 100vh;
   background-image: url(../img/Fond_de_base.jpeg);
   background-attachment: fixed;
   background-size: cover;
 }
-
-
-
-
-
 
 /* page Réponse */
 
-
 .premiere_page_reponse {
   width: auto;
-  height: 106.17886178861788vh;
+  height: 100vh;
   background-image: url(../img/Fond_de_base.jpeg);
   background-attachment: fixed;
   background-size: cover;
 }
 
-
-
-
-
-
-
-
 /* Page de fin */
-
 
 .page_de_fin {
   width: auto;

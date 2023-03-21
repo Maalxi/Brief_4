@@ -1,0 +1,35 @@
+/* .reponse_A {
+  background-color: rgba(0, 0, 255, 0.85);
+  padding: 50px 40px 50px 40px;
+  margin: 2%;
+  border-radius: 15%;
+  border: none;
+  cursor: pointer;
+}
+
+.reponse_B {
+  background-color: rgba(255, 0, 0, 0.85);
+  padding: 50px 40px 50px 40px;
+  margin: 2%;
+  border-radius: 15%;
+  border: none;
+  cursor: pointer;
+}
+
+.reponse_C {
+  background-color: rgba(255, 255, 0, 0.85);
+  padding: 50px 40px 50px 40px;
+  margin: 2%;
+  border-radius: 15%;
+  border: none;
+  cursor: pointer;
+}
+
+.reponse_D {
+  background-color: rgba(0, 128, 0, 0.85);
+  padding: 50px 40px 50px 40px;
+  margin: 2%;
+  border-radius: 15%;
+  border: none;
+  cursor: pointer;
+} */
