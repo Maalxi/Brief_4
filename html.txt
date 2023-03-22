@@ -1,3 +1,34 @@
+    <section class="premiere_page_question hide">
+      <div class="h2_gauche">
+        <h2 class="text_h2_gauche">Quiz Eco-Logique</h2>
+      </div>
+      <div class="centrer_question">
+        <div class="centrer_titre_question">
+          <div class="titre_question">
+            <h3>Quelle serait la température de la Terre sans atmosphère ?</h3>
+          </div>
+        </div>
+        <div class="questions">
+          <div class="reponse_A" data-reponse="A">
+            <p>+15°C</p>
+          </div>
+          <div class="reponse_B" data-reponse="B">
+            <p>0°C</p>
+          </div>
+          <div class="reponse_C" data-reponse="C">
+            <p>-50°C</p>
+          </div>
+          <div class="reponse_D" data-reponse="D">
+            <p>-18°C</p>
+          </div>
+        </div>
+        <div class="container_button">
+          <button id="button_info">Info</button>
+          <button id="button_next">Next</button>
+        </div>
+      </div>
+    </section>
+
     <!-- Deuxième page Question -->
 
     <!-- <section class="deuxieme_page_question">
