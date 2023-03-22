@@ -26,6 +26,13 @@ const reponse_B: Element | null = document.querySelector(".reponse_B");
 const reponse_C: Element | null = document.querySelector(".reponse_C");
 const reponse_D: Element | null = document.querySelector(".reponse_D");
 
+// Récupération de la réponse juste et des fausses
+
+const valeurReponseA: string | null = reponse_A.getAttribute('data-reponse');
+const valeurReponseB: string | null = reponse_B.getAttribute('data-reponse');
+const valeurReponseC: string | null = reponse_C.getAttribute('data-reponse');
+const valeurReponseD: string | null = reponse_D.getAttribute('data-reponse');
+
 // Bouton next pour les questions
 
 const button_next: Element | null = document.querySelector("#button_next");
@@ -81,11 +88,11 @@ const reponses = [reponse_A, reponse_B, reponse_C, reponse_D];
 
 for (const reponse of reponses) {
   reponse?.addEventListener("click", () => {
+    console.log("Réponse sélectionnée !");
     // Retire la classe "selected" de toutes les réponses
     for (const autreReponse of reponses) {
       autreReponse?.classList.remove("selected");
     }
-
     // Ajoute la classe "selected" à la réponse sélectionnée
     reponse?.classList.add("selected");
   });
@@ -115,7 +122,6 @@ if (
     // Vérifie si une réponse a été sélectionnée
     if (reponseSelectionnee !== null) {
       // Vérifie si la réponse sélectionnée est la bonne
-      const reponsesValides = ["B", "C", "A", "D"];
       const reponseValide = reponsesValides[indexQuestionCourante];
       if (reponseSelectionnee.dataset.reponse === reponseValide) {
         // Incrémente le score dans le localstorage
@@ -159,21 +165,3 @@ if (
   });
 }
 
-console.log(reponses)
-// Afficher la section1 et cacher les autres sections
-
-// if (section1 !== null) {
-//   section1.style.display = "block";
-// }
-
-// if (section2 !== null) {
-//   section2.style.display = "none";
-// }
-
-// if (section3 !== null) {
-//   section3.style.display = "none";
-// }
-
-// if (section4 !== null) {
-//   section4.style.display = "none";
-// }
