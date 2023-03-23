@@ -94,7 +94,7 @@ function validateUsername() {
       section1.classList.add("hide");
       section2.classList.remove("hide");
       section2.classList.add("show");
-      button_info?.classList.add("hide")
+      button_info?.classList.add("hide");
     }
   } else {
     alert("Le pseudo ne peut pas être vide !");
@@ -167,12 +167,18 @@ if (button_next) {
         datajson.Question[current_question_index - 1].question;
       const current_question: string =
         datajson.Question[current_question_index].question;
-      const data_anecdote = datajson.Question[current_question_index - 1].anecdote;
+      const data_anecdote =
+        datajson.Question[current_question_index - 1].anecdote;
 
       const A = datajson.Question[current_question_index].propositions[0];
       const B = datajson.Question[current_question_index].propositions[1];
       const C = datajson.Question[current_question_index].propositions[2];
       const D = datajson.Question[current_question_index].propositions[3];
+
+      // Réinitialiser les boutons de réponse
+      reponses.forEach((reponse) => {
+        reponse?.classList.remove("selected");
+      });
 
       const h3_question = document.querySelector(".h3_question");
       if (h3_question) {
@@ -209,11 +215,14 @@ if (button_next) {
         anecdote.innerHTML = data_anecdote;
       }
 
-      // Supprime la class selected
-      for (const reponse of reponses) {
-        if (reponse !== null) {
-          reponse.classList.remove("selected");
-        }
+      // Réinitialiser la sélection de réponse
+      reponses.forEach((reponse) => {
+        reponse?.classList.remove("selected");
+      });
+
+      // Réapparition du bouton_info
+      if (button_info) {
+        button_info.classList.remove("hide");
       }
     }
   });
