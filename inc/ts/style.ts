@@ -17,9 +17,10 @@ const button: HTMLButtonElement | null = document.querySelector(
   ".button_start > button"
 );
 
-// Récupération du pseudo
+// Récupération de l'user input
 
-const usernameInput = document.getElementById("username") as HTMLInputElement;
+const usernameInput: HTMLInputElement | null =
+  document.querySelector("#username");
 
 // Récupération des questions
 
@@ -62,10 +63,12 @@ const reponses = [reponse_A, reponse_B, reponse_C, reponse_D];
 
 const reponsesValides = ["D", "B", "A", "B", "B"];
 
+let score = 0;
+
 // Validation du pseudo lors de l'appui sur la touche Entrée
 // Validation du pseudo et passage à la section suivante lors du clic sur le bouton Start
 
-usernameInput.addEventListener("keydown", (event: KeyboardEvent) => {
+usernameInput?.addEventListener("keydown", (event: KeyboardEvent) => {
   if (event.keyCode === 13) {
     event.preventDefault();
     validateUsername();
@@ -86,9 +89,9 @@ if (
 }
 
 function validateUsername() {
-  const username = usernameInput.value.trim();
-  if (username.length > 0) {
-    localStorage.setItem("username", username);
+  const username = usernameInput?.value.trim();
+  if (username!.length > 0) {
+    localStorage.setItem("username", username!);
     if (section1 !== null && section2 !== null) {
       section1.classList.remove("show");
       section1.classList.add("hide");
@@ -152,6 +155,12 @@ if (button_next) {
     // Continuer l'exécution si une réponse a été sélectionnée
     current_question_index++;
 
+    // Vérifie si la réponse sélectionnée est la réponse valide
+    const reponseSelectionnee = selected_response.getAttribute("data-reponse");
+    if (reponseSelectionnee === reponsesValides[current_question_index - 1]) {
+      score++;
+    }
+
     // Vérifie si toutes les questions ont été répondues
     if (current_question_index === datajson.Question.length) {
       // Cacher la section des questions et afficher la section de fin
@@ -160,9 +169,23 @@ if (button_next) {
         section2.classList.add("hide");
         section4.classList.remove("hide");
         section4.classList.add("show");
+        // Afficher le score total sur la page de fin
+        const scoreElement = document.querySelector("#score_user");
+        if (scoreElement) {
+          scoreElement.textContent = `${score}/${datajson.Question.length}`;
+        }
+        // Récupération du pseudo
+
+        const username_get = localStorage.getItem("username");
+
+        const pseudo = document.querySelector("#pseudo");
+
+        if (username_get !== null && pseudo !== null) {
+          pseudo.innerHTML = username_get;
+        }
       }
     } else {
-      // Afficher la première question dès le début
+      // Afficher la question suivante
       const previous_question: string =
         datajson.Question[current_question_index - 1].question;
       const current_question: string =
@@ -269,5 +292,6 @@ if (button_fin !== null && section1 !== null && section4 !== null) {
     section1.classList.add("show");
     section4.classList.remove("show");
     section4.classList.add("hide");
+    localStorage.clear();
   });
 }
