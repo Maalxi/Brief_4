@@ -334,3 +334,30 @@ closeBtn?.addEventListener('click', () => {
   popup.style.display = 'none';
   fin_button_div?.classList.remove('hide');
 });
+
+
+// Le timer ou plus le début d'un timer
+
+// const durationInSeconds: number = 30;
+// const timerElement: Element | null = document.querySelector(".timer");
+
+// function updateTimer(): void {
+//   // let timeLeftInSeconds: number = Math.max(0, timeLeftInSeconds - 1); // On ne veut pas que le temps soit négatif
+  
+//   const seconds: number = timeLeftInSeconds % 60;
+  
+//   const secondsString: string = String(seconds).padStart(2, "0");
+
+//   if (timerElement) {
+//     timerElement.textContent = `${secondsString}`;
+//   }
+
+//   if (timeLeftInSeconds === 0) {
+//     clearInterval(timerInterval);
+//     // Mettre ici le code à exécuter lorsque le minuteur arrive à 0
+//   }
+// }
+
+// let timeLeftInSeconds: number = durationInSeconds;
+// const timerInterval: number = setInterval(updateTimer, 1000);
+

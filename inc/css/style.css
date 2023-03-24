@@ -17,7 +17,7 @@ h1 {
   color: rgba(106, 142, 237, 1);
   font-size: 54px;
   line-height: 70px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   align-items: center;
 }
@@ -28,7 +28,7 @@ h2 {
   color: rgb(223, 226, 241);
   font-size: 28px;
   line-height: 36px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   margin-bottom: 15%;
   text-shadow: black 0.1em 0.1em 0.2em;
 }
@@ -39,7 +39,7 @@ h3 {
   color: rgba(106, 142, 237, 1);
   font-size: 24px;
   line-height: 36px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   margin-bottom: 5%;
   padding: 5px 5px 5px 5px;
@@ -51,7 +51,7 @@ p {
   color: black;
   font-size: 20px;
   line-height: 36px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   font-family: "Roboto", sans-serif;
 }
@@ -74,7 +74,7 @@ button {
   color: rgba(0, 0, 0, 1);
   font-size: 18px;
   line-height: 160.0000023841858%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   font-family: "Pacifico", sans-serif;
 }
@@ -103,9 +103,6 @@ button {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.9);
-  /* transition: opacity 500ms; */
-  /* visibility: hidden; */
-  /* opacity: 100%; */
 }
 
 .popup_h2 {
@@ -149,7 +146,7 @@ button {
   color: rgba(106, 142, 237, 1);
   font-size: 24px;
   line-height: 36px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   font-family: "Pacifico", sans-serif;
 }
@@ -227,7 +224,7 @@ button {
   color: rgba(106, 142, 237, 1);
   font-size: 24px;
   line-height: 36px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   margin-bottom: 10%;
   font-family: "Pacifico", sans-serif;
