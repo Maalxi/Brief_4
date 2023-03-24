@@ -81,12 +81,65 @@ button {
 
 /* Afficher (show) ou cacher (hide) les sections */
 
-/* .show {
-  display: "" ;
-} */
-
 .hide {
   display: none !important;
+}
+
+#button_next {
+  margin: auto;
+}
+
+#button_info {
+  margin: auto;
+}
+
+/* Popup */
+
+.popup {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  /* transition: opacity 500ms; */
+  /* visibility: hidden; */
+  /* opacity: 100%; */
+}
+
+.popup_h2 {
+  margin-top: 50%;
+}
+
+.popup_p {
+  color: #ebebeb;
+  margin-bottom: 10%;
+  margin-top: -20%;
+}
+
+.close-btn {
+  margin: auto;
+}
+
+/* Inupt username */
+
+#username {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px rgb(105, 119, 157);
+}
+
+/* Alert de l'username */
+
+.alert_username {
+  color: red;
+  font-size: 14px;
+  margin-bottom: -16%;
 }
 
 /* Page Question */
@@ -133,7 +186,10 @@ button {
   align-items: center;
 }
 
-.reponse_A, .reponse_B, .reponse_C, .reponse_D {
+.reponse_A,
+.reponse_B,
+.reponse_C,
+.reponse_D {
   display: inline-block;
   background-color: #f7f7f7;
   border: 2px solid #ccc;
@@ -144,12 +200,18 @@ button {
   font-size: 16px;
 }
 
-.reponse_A:hover, .reponse_B:hover, .reponse_C:hover, .reponse_D:hover {
+.reponse_A:hover,
+.reponse_B:hover,
+.reponse_C:hover,
+.reponse_D:hover {
   background-color: #ebebeb;
 }
 
-.reponse_A.selected, .reponse_B.selected, .reponse_C.selected, .reponse_D.selected {
-  background-color: #4CAF50;
+.reponse_A.selected,
+.reponse_B.selected,
+.reponse_C.selected,
+.reponse_D.selected {
+  background-color: #4caf50;
   color: #fff;
 }
 
@@ -207,7 +269,15 @@ button {
 }
 
 .congrat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20%;
+  margin-top: 30%;
+  width: 95%;
+  background-color: #f7f7f7;
+  border-radius: 15%;
+  padding: 5px;
 }
 
 /* Média pour 350px */
@@ -216,45 +286,43 @@ button {
   /* Le CSS principal */
 
   h2 {
-    margin-bottom: 25%;
+    margin-bottom: 30%;
   }
 
   /* Page Question */
 
   .questions {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
   }
-  .reponse_A {
-    padding: 20px 20px 20px 20px;
-    width: auto;
-    border-radius: 10%;
-    margin: 5%;
-  }
-  .reponse_B {
-    padding: 20px 20px 20px 20px;
-    width: auto;
-    border-radius: 10%;
-    margin: 5%;
-  }
-  .reponse_C {
-    padding: 20px 20px 20px 20px;
-    width: auto;
-    border-radius: 10%;
-    margin: 5%;
-  }
+  .reponse_A,
+  .reponse_B,
+  .reponse_C,
   .reponse_D {
-    padding: 20px 20px 20px 20px;
+    padding: 5px;
     width: auto;
     border-radius: 10%;
-    margin: 5%;
+    margin: 3%;
   }
   .container_button {
     display: flex;
     justify-content: center;
     gap: 10%;
     width: 70%;
+  }
+  .centrer_titre_question {
+    margin-bottom: 10%;
+  }
+  .anecdote {
+    font-size: 16px;
+  }
+  .text_reponse {
+    padding: 10px;
+    margin: 0 5% 10% 5%;
+  }
+  .text_fin {
+    width: 95%;
   }
 }
 
@@ -329,24 +397,9 @@ button {
   .questions {
     margin-bottom: 5%;
   }
-  .reponse_A {
-    padding: 50px 100px 50px 100px;
-    margin: 2%;
-    border-radius: 5%;
-    border: none;
-  }
-  .reponse_B {
-    padding: 50px 100px 50px 100px;
-    margin: 2%;
-    border-radius: 5%;
-    border: none;
-  }
-  .reponse_C {
-    padding: 50px 100px 50px 100px;
-    margin: 2%;
-    border-radius: 5%;
-    border: none;
-  }
+  .reponse_A,
+  .reponse_B,
+  .reponse_C,
   .reponse_D {
     padding: 50px 100px 50px 100px;
     margin: 2%;

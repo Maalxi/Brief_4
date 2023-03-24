@@ -22,7 +22,8 @@
           <h1>Quiz Eco-Logique</h1>
         </div>
         <div class="input_pseudo">
-          <input id= "username" type="text">
+          <input id= "username" type="text" placeholder="Your username..">
+          <p class="alert_username hide">L'username ne peut pas être vide !</p>
         </div>
         <div class="button_start">
           <button>Start</button>
@@ -92,10 +93,10 @@
       </div>
       <div class="container_fin">
         <div class="congrat">
-          <p>Vous avez eu <span id="score_user"></span> bonnes réponses</p>
-          <p>Merci d'avoir jouer <span id="pseudo"></span> !</p>
+          <p class="text_fin">Vous avez eu <span id="score_user"></span> bonnes réponses</p>
+          <p class="text_fin">Merci d'avoir jouer <span id="pseudo"></span> !</p>
         </div>
-        <div class="button_fin">
+        <div class="button_fin hide" id="refresh">
           <button>Quitter</button>
         </div>
       </div>

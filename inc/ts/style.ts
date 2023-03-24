@@ -22,6 +22,10 @@ const button: HTMLButtonElement | null = document.querySelector(
 const usernameInput: HTMLInputElement | null =
   document.querySelector("#username");
 
+// Alert pour l'Username
+
+const alert_username = document.querySelector(".alert_username")
+
 // Récupération des questions
 
 const reponse_A: Element | null = document.querySelector(".reponse_A");
@@ -47,7 +51,7 @@ const button_info: Element | null = document.querySelector("#button_info");
 
 // Boutton next pour la section anecdote
 
-const button_next_anecdote = document.querySelector(".button_next_anecdote");
+const button_next_anecdote: Element | null = document.querySelector(".button_next_anecdote");
 
 // Bouton Quitter - Retour au début du quizz
 
@@ -55,15 +59,41 @@ const button_fin: HTMLButtonElement | null = document.querySelector(
   ".button_fin > button"
 );
 
+const fin_button_div: HTMLButtonElement | null = document.querySelector(
+  ".button_fin"
+);
+
+// Créer la popup
+
+const popup = document.createElement('div');
+popup.className = 'popup';
+
+// Ajouter le contenu de la popup
+
+popup.innerHTML = `
+  <h2 class="popup_h2">Merci d'avoir joué au quiz !</h2>
+  <p class="popup_p">Nous espérons que vous avez appris quelque chose de nouveau sur le sujet traité.</p>
+  <button class="close-btn">Fermer</button>
+`;
+
+// Ajouter la popup à la page
+
+const quizContainer = document.querySelector('.congrat');
+quizContainer?.appendChild(popup);
+
+// Fermer la Popup
+
+const closeBtn = popup.querySelector('.close-btn');
+
 // Choix d'une questions
 
-const reponses = [reponse_A, reponse_B, reponse_C, reponse_D];
+const reponses: (Element | null)[] = [reponse_A, reponse_B, reponse_C, reponse_D];
 
 // Tableau des réponses valides pour chaque question
 
-const reponsesValides = ["D", "B", "A", "B", "B"];
+const reponsesValides: string[] = ["D", "B", "A", "B", "B"];
 
-let score = 0;
+let score: number = 0;
 
 // Validation du pseudo lors de l'appui sur la touche Entrée
 // Validation du pseudo et passage à la section suivante lors du clic sur le bouton Start
@@ -100,7 +130,7 @@ function validateUsername() {
       button_info?.classList.add("hide");
     }
   } else {
-    alert("Le pseudo ne peut pas être vide !");
+    alert_username?.classList.remove("hide")
   }
 }
 
@@ -286,6 +316,7 @@ if (button_next_anecdote !== null && section2 !== null && section3 !== null) {
 }
 
 // Boutton Quitter
+
 if (button_fin !== null && section1 !== null && section4 !== null) {
   button_fin.addEventListener("click", () => {
     section1.classList.remove("hide");
@@ -293,5 +324,13 @@ if (button_fin !== null && section1 !== null && section4 !== null) {
     section4.classList.remove("show");
     section4.classList.add("hide");
     localStorage.clear();
+    location.reload()
   });
 }
+
+// Cacher la popup lorsqu'on clique sur le bouton "Fermer"
+
+closeBtn?.addEventListener('click', () => {
+  popup.style.display = 'none';
+  fin_button_div?.classList.remove('hide');
+});
